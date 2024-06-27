@@ -103,8 +103,10 @@ Breakdown:
     10 points - 4 items (2 pairs @ 5 points each)  
   = 109 points  
   
-The application will be running on http://localhost:8080.  
+The application will be running on http://localhost:8080. 
+  
 API Endpoints  
+  
 Process Receipt Endpoint: /receipts/process  
 Method: POST  
   
