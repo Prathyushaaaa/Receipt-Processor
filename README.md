@@ -86,9 +86,7 @@ Breakdown:
     10 points - 2:33pm is between 2:00pm and 4:00pm  
     10 points - 4 items (2 pairs @ 5 points each)  
   = 109 points  
-  
-The application will be running on http://localhost:8080. 
-  
+   
 **API Endpoints**  
   
 Process Receipt Endpoint: /receipts/process  
@@ -97,17 +95,14 @@ Method: POST
 Get Points Endpoint: /receipts/{id}/points  
 Method: GET (Retrieves points for a specific receipt)  
   
-Path Parameters:  
-id (string): The ID of the receipt.  
-  
-
-
+Path Parameters: id (string) - The ID of the receipt.  
   
 **Prerequisites**  
 Before you begin, ensure you have the following installed on your system:  
 -  Download and install Docker Desktop from Docker's official website.   
 -  Download and install Git from Git's official website.  
--  Download and install Postman from Postman's official website.  
+-  Download and install Postman from Postman's official website.
+-  Download and install JDK (Java Development Kit) from the official Oracle website or OpenJDK.
   
 **Setting Up the Environment**  
   
@@ -116,9 +111,12 @@ Before you begin, ensure you have the following installed on your system:
 git clone https://github.com/Prathyushaaaa/Receipt-Processor.git  
 cd Receipt-Processor  
 
+**Step-2: Build the JAR file:**   
+mvn clean package  
+
 **Step-2: Build a Docker image and run the container:**  
-docker build -t receipt-processor .  
-docker run -p 8080:8080 receipt-processor  
+docker build -t receiptprocessor .  
+docker run -p 8080:8080 receiptprocessor  
 
 **Step-3: Testing on Postman:**  
   
@@ -129,11 +127,8 @@ Body: Raw JSON (use the example JSON provided in the "Process Receipt" section).
 **GET Request:**  
 URL: http://localhost:8080/receipts/{id}/points (replace {id} with the actual receipt ID obtained from the POST response)   
   
-
-
-
 Snapshots of the calculated reward points are as follows:  
-POST Request  
+**POST Request**  
 <img width="959" alt="image" src="https://github.com/Prathyushaaaa/Receipt-Processor/assets/65707545/d1836c14-9350-4303-80b8-a41a68b574b8">  
-GET Request  
+**GET Request**  
 <img width="959" alt="image" src="https://github.com/Prathyushaaaa/Receipt-Processor/assets/65707545/83ae8677-6496-48e7-a19c-a79a561a7371">
