@@ -95,7 +95,9 @@ Method: POST
 Get Points Endpoint: /receipts/{id}/points  
 Method: GET (Retrieves points for a specific receipt)  
   
-Path Parameters: id (string) - The ID of the receipt.  
+Path Parameters: id (string) - The ID of the receipt. 
+
+The application will be running on http://localhost:8080.  
   
 **Prerequisites**  
 Before you begin, ensure you have the following installed on your system:  
