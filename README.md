@@ -20,7 +20,7 @@ Download and install Git from Git's official website.
 Download and install Postman from Postman's official website.  
   
 Setting Up the Environment  
-To clone the repository, follow the below instructions:  
+To clone the repository, open cmd and follow the below instructions:  
   
 git clone https://github.com/Prathyushaaaa/Receipt-Processor.git  
 cd Receipt-Processor  
