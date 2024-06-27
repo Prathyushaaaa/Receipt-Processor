@@ -102,7 +102,6 @@ Breakdown:
                 note: '&' is not alphanumeric  
     10 points - 2:33pm is between 2:00pm and 4:00pm  
     10 points - 4 items (2 pairs @ 5 points each)  
-  + ---------  
   = 109 points  
   
 The application will be running on http://localhost:8080.  
