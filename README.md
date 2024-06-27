@@ -1,5 +1,4 @@
 # Receipt-Processor
-Receipt Processor
 
 The application calculates reward points from a receipt. Built with Java and Spring Boot, it provides endpoints to process receipts and calculate points based on the receipts.  
 
