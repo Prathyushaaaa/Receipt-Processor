@@ -97,7 +97,7 @@ Method: GET (Retrieves points for a specific receipt)
   
 Path Parameters: id (string) - The ID of the receipt. 
 
-The application will be running on http://localhost:8080.  
+The application will be running on localhost:8080.  
   
 **Prerequisites**  
 Before you begin, ensure you have the following installed on your system:  
@@ -123,11 +123,11 @@ docker run -p 8080:8080 receiptprocessor
 **Step-3: Testing on Postman:**  
   
 **POST Request:**  
-URL: http://localhost:8080/receipts/process  
+URL: localhost:8080/receipts/process  
 Body: Raw JSON (use the example JSON provided in the "Process Receipt" section).  
   
 **GET Request:**  
-URL: http://localhost:8080/receipts/{id}/points (replace {id} with the actual receipt ID obtained from the POST response)   
+URL: localhost:8080/receipts/{id}/points (replace {id} with the actual receipt ID obtained from the POST response)   
   
 Snapshots of the calculated reward points are as follows:  
 **POST Request**  
