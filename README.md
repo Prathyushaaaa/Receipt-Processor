@@ -3,32 +3,17 @@
 The application calculates reward points from a receipt. Built with Java and Spring Boot, it provides endpoints to process receipts and calculate points based on the receipts.  
 
 The following rules collectively define how many points should be awarded to a receipt.  
-
-   • One point for every alphanumeric character in the retailer name.  
-   • 50 points if the total is a round dollar amount with no cents.  
-   • 25 points if the total is a multiple of 0.25.  
-   • 5 points for every two items on the receipt.  
-   • If the trimmed length of the item description is a multiple of 3, multiply the price by 0.2 and round up to the nearest integer. The result is the number of points earned.  
-   • 6 points if the day in the purchase date is odd.  
-   • 10 points if the time of purchase is after 2:00pm and before 4:00pm.  
   
-Prerequisites  
-Before you begin, ensure you have the following installed on your system:  
-Download and install Docker Desktop from Docker's official website.   
-Download and install Git from Git's official website.  
-Download and install Postman from Postman's official website.  
-  
-Setting Up the Environment  
-To clone the repository, open cmd and follow the below instructions:  
-  
-git clone https://github.com/Prathyushaaaa/Receipt-Processor.git  
-cd Receipt-Processor  
-  
-Access the application:  
+   - One point for every alphanumeric character in the retailer name.  
+   - 50 points if the total is a round dollar amount with no cents.  
+   - 25 points if the total is a multiple of 0.25.  
+   - 5 points for every two items on the receipt.  
+   - If the trimmed length of the item description is a multiple of 3, multiply the price by 0.2 and round up to the nearest integer. The result is the number of points earned.  
+   - 6 points if the day in the purchase date is odd.  
+   - 10 points if the time of purchase is after 2:00pm and before 4:00pm.  
 
 To understand how the points are evaluated, go through the following examples.  
-
-Example 1  
+**Example 1**  
 ```json
 {
   "retailer": "Target",
@@ -55,7 +40,7 @@ Example 1
   "total": "35.35"
 }
 ```
-Expected Output  
+**Expected Output**  
 Total Points: 28  
 Breakdown:  
      6 points - retailer name has 6 characters  
@@ -67,7 +52,7 @@ Breakdown:
      6 points - purchase day is odd  
   = 28 points  
   
-Example 2  
+**Example 2**  
 ```json
 {
   "retailer": "M&M Corner Market",
@@ -91,7 +76,7 @@ Example 2
   "total": "9.00"
 }
 ```
-Expected Output  
+**Expected Output**  
 Total Points: 109  
 Breakdown:  
     50 points - total is a round dollar amount  
@@ -104,28 +89,48 @@ Breakdown:
   
 The application will be running on http://localhost:8080. 
   
-API Endpoints  
+**API Endpoints**  
   
 Process Receipt Endpoint: /receipts/process  
 Method: POST  
   
-Get Points  
-Endpoint: /receipts/{id}/points  
-Method: GET  
-Retrieves points for a specific receipt.  
+Get Points Endpoint: /receipts/{id}/points  
+Method: GET (Retrieves points for a specific receipt)  
   
 Path Parameters:  
 id (string): The ID of the receipt.  
   
-Test on Postman:  
+
+
   
-POST Request:  
+**Prerequisites**  
+Before you begin, ensure you have the following installed on your system:  
+-  Download and install Docker Desktop from Docker's official website.   
+-  Download and install Git from Git's official website.  
+-  Download and install Postman from Postman's official website.  
+  
+**Setting Up the Environment**  
+  
+**Step-1: To clone the repository, open cmd and follow the below instructions:**  
+  
+git clone https://github.com/Prathyushaaaa/Receipt-Processor.git  
+cd Receipt-Processor  
+
+**Step-2: Build a Docker image and run the container:**  
+docker build -t receipt-processor .  
+docker run -p 8080:8080 receipt-processor  
+
+**Step-3: Testing on Postman:**  
+  
+**POST Request:**  
 URL: http://localhost:8080/receipts/process  
 Body: Raw JSON (use the example JSON provided in the "Process Receipt" section).  
   
-GET Request:  
-URL: http://localhost:8080/receipts/{id}/points (replace {id} with the actual receipt ID obtained from the POST response)  
-Method: GET  
+**GET Request:**  
+URL: http://localhost:8080/receipts/{id}/points (replace {id} with the actual receipt ID obtained from the POST response)   
+  
+
+
 
 Snapshots of the calculated reward points are as follows:  
 POST Request  
