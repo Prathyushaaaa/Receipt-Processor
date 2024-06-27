@@ -66,7 +66,6 @@ Breakdown:
      3 Points - "Klarbrunn 12-PK 12 FL OZ" is 24 characters (a multiple of 3)  
                 item price of 12.00 * 0.2 = 2.4, rounded up is 3 points  
      6 points - purchase day is odd  
-  + ---------  
   = 28 points  
   
 Example 2  
