@@ -116,11 +116,11 @@ cd Receipt-Processor
 **Step-2: Build the JAR file:**   
 mvn clean package  
 
-**Step-2: Build a Docker image and run the container:**  
+**Step-3: Build a Docker image and run the container:**  
 docker build -t receiptprocessor .  
 docker run -p 8080:8080 receiptprocessor  
 
-**Step-3: Testing on Postman:**  
+**Step-4: Testing on Postman:**  
   
 **POST Request:**  
 URL: localhost:8080/receipts/process  
